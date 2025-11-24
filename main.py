@@ -7,6 +7,7 @@ import numpy as np
 import pickle
 import os
 import cv2
+import uvicorn
 from .egg_features import extract_features_from_image
 
 app = FastAPI()
@@ -41,7 +42,7 @@ def home(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
 @app.post("/predict")
-async def predict(file: UploadFile = File(...)):
+async def predict(file: UploadFile = File(...)):    
     contents = await file.read()
     arr = np.frombuffer(contents, np.uint8)
     img = cv2.imdecode(arr, cv2.IMREAD_COLOR)
@@ -58,6 +59,6 @@ async def predict(file: UploadFile = File(...)):
     return {"cluster": cluster, "size": size}
 
 if __name__ == "__main__":
-    import uvicorn
-    port = int(os.environ.get("PORT", 8000))
-    uvicorn.run("backend.main:app", host="0.0.0.0", port=port, reload=False)
+    port = int(os.environ.get("PORT", 10000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
+
