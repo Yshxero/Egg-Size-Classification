@@ -8,7 +8,7 @@ import pickle
 import os
 import cv2
 import uvicorn
-from .egg_features import extract_features_from_image
+from egg_features import extract_features_from_image
 
 app = FastAPI()
 
