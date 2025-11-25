@@ -8,10 +8,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
 }
 
 .top-bar {
-    width: 100%;
+    width: 100vw;
+    max-width: 100%;
     height: 70px;
     background-color: #ffd36b;
     display: flex;
@@ -112,7 +114,7 @@ button:hover {
     position: absolute;
     width: 100%;
     height: 4px;
-    background: rgba(255,255,255,0.8);
+    background: rgba(0, 255, 0, 0.8);
     box-shadow: 0 0 10px rgba(255,255,255,0.8);
     animation: scan 2s linear infinite;
     top: 0;

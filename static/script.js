@@ -12,6 +12,7 @@ uploadBtn.addEventListener('click', async () => {
 // preview
 preview.src = URL.createObjectURL(f);
 preview.style.display = 'block';
+document.querySelector('.preview-container').style.display = 'block';
 
 
 const fd = new FormData();
