@@ -2,6 +2,7 @@ fastapi
 uvicorn[standard]
 python-multipart
 numpy
+jinja2
 opencv-python-headless
 scikit-image
 scikit-learn
