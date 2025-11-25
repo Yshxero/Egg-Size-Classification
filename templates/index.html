@@ -7,15 +7,31 @@
 <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
+
+<header class="top-bar">
+    <div class="logo-section">
+        <img src="/static/egg-logo.png" class="egg-logo">
+        <span class="title">Egg Size Classifier</span>
+    </div>
+</header>
+
 <main class="card">
-    <h1>Egg Size Detector</h1>
-    <p>Upload an egg image and get its size category.</p>
+
+<main class="card">
+
+    <h1>Upload an egg image</h1>
+    <p>Preview your egg and classify its size.</p>
 
     <input id="file" type="file" accept="image/*" />
+
+    <div class="preview-container">
+        <img id="preview" src="" alt="preview">
+        <div class="scan-line"></div>
+    </div>
+
     <button id="upload">Upload & Classify</button>
 
     <div id="result" class="result"></div>
-    <img id="preview" src="" alt="preview" style="display:none;" />
 </main>
 
 <script src="/static/script.js"></script>
