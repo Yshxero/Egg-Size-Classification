@@ -23,7 +23,7 @@ uploadBtn.addEventListener('click', async () => {
     fd.append('file', f);
 
     try {
-        const resp = await fetch(`${window.location.origin}/predict`, {
+        const resp = await fetch(`/predict`, {
             method: 'POST',
             body: fd
         });

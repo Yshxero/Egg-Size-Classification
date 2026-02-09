@@ -1,9 +1,10 @@
-fastapi
-uvicorn[standard]
-python-multipart
-numpy
-jinja2
-opencv-python-headless
+numpy==1.26.4
+scipy==1.11.4
+scikit-learn==1.6.1
+opencv-python-headless==4.8.1.78
 scikit-image
-scikit-learn
 joblib
+fastapi
+uvicorn
+jinja2
+python-multipart
